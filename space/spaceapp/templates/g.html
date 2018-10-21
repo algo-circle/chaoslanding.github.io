@@ -1,0 +1,152 @@
+<html>
+    <body>
+        <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+        {% load staticfiles %}
+         <style>
+             /* ---- reset ---- */
+
+body {
+  margin: 0;
+  background-color: #17182f;
+}
+
+canvas {
+  display: block;
+  vertical-align: bottom;
+}
+
+
+/* ---- particles.js container ---- */
+
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+             #title{
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  
+  color: #FFF;
+  text-align: center;
+  font-family: 'lato',sans-serif;
+  font-weight: 300;
+  font-size: 50px;
+  letter-spacing: 10px;
+  
+  margin-top: -60px;
+  padding-left: 10px;
+             }
+             
+ #stage3{
+          font-size: 19;
+          color: white;
+          z-index:5;
+          position:relative;
+         }
+             p{
+                 font-size: 16;
+                 color: white;
+                 text-align: center;
+             }
+             h1{
+                 font-size:26;
+                 color: white;
+                 text-align: center;
+             }
+             
+             .header{
+                font-size:100;
+                 color:white;
+                 width:1000px;
+                 overflow: hidden;
+                 height:200px;
+                 float:left;
+                 padding-top:100px;
+                 box-sizing:border-box;
+             }
+             
+            
+        </style>
+        
+<!-- particles.js container --> 
+<div id="particles-js">
+
+<!-- particles.js lib - https://github.com/VincentGarreau/particles.js --> 
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+        <script src="{% static 'js/f.js' %}"></script>
+    
+        </div>
+        <div id="world">
+             
+         <div class="header" >LAUNCH VEHICLE</div>
+                    
+         <table style="height:300px; width:100%;" id="table1">
+            
+            <tr>
+                 
+                <td>
+                   
+                        <h1>STAGE-3</h1>
+                    <p>
+It has one J-2 engine and uses the same fuel as the S-II. <br>It's thrust-to weight ratio is 73:18.
+The thrust value on<br> sea level is 486.2 kN (109,302 lbf) <br>and in vaccum is 1,033.1 kN (232,250 lbf).<br>
+The nozzle ratio is 27.5:1 and<br> the chamber pressure is 5,260 kilopascals (763 psi).<br>
+The fuel burn out time is 2.75 minutes which provides <br>the payload an altitude of 115 miles.
+After the rocket escapes <br>the earth's atmosphere it's orbital velocity becomes 17500 mph.
+                    </p>
+                </td>
+                <td rowspan=3><img src="{% static 'images/bc.png' %}"></td>
+                <td>
+                    <p>
+                        
+                    </p>
+                </td>
+             </tr>
+             <tr>
+                 <td>
+                     <h1>STAGE-2</h1>
+                        <p>
+At this stage five Rocketdyne J-2 engines are used 
+in a similar<br> arrangement to the S-IC. The thrust-to-weight ratio is 73:18 <br>and the value of thrust in vaccum and sea level 
+is 486.2 kN (109,302 lbf)<br> and 1,033.1 kN (232,250 lbf)respectively.<br>
+The nozzle ratio is 27.5:1 and <br>the chamber pressure required is 5,260 kilopascals (763 psi).<br>
+The burn time of fuel is 6 minutes that takes the payload <br> to an altitude of 115 miles.<br>
+                     </p>
+                 </td>
+                <td></td>
+                <td>
+                    <p>
+                        
+                     </p>
+                 </td>
+             </tr>
+             <tr>
+                <td>
+                    
+                        <h1>STAGE-1</h1>
+                    <p>
+To launch the rocket we are using five Rocketdyne F-1 engines,<br>
+the thrust-to-weight ratio is 94:1 and the value of thrust in vaccum<br> and sea level 
+is 1,746,000 lbf (7,770 kN) and 1,522,000 lbf (6,770 kN) <br>respectively. The chamber pressure 
+needed is 70 bar\s (1,015 psi; 7 MPa).<br> The dry weight of the rocket is 18,500 pounds (8,400 kg).<br>
+The burn time is 2.5 minutes and by that time,<br> the rocket takes payload to an altitude
+of 42 miles.
+                    </p>
+                 </td>
+                <td>
+                 </td>
+                <td>
+                    <p>
+                
+                    </p>
+                 </td>
+             </tr>
+        </table>
+        </div>
+        
+       
+    </body>
+</html>

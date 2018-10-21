@@ -1,0 +1,232 @@
+<html>
+	<head>
+        {% load staticfiles %}
+	<script src="{%  static 'jss/jquery.js' %}"></script>
+        
+	<style>
+		.moon{
+			background:url({% static "image/luna2.jpg" %});
+			min-width:100%;
+			min-height:700px;
+			overflow:hidden;
+			background-repeat:no-repeat;
+			background-size:contain;
+			
+		}
+		
+		.shadow{
+			width:25%;
+			background:linear-gradient(to right, #0009 93%, #a4a4a41a);
+			opacity:8.5;
+			height:100%;
+			float:left;
+		}
+		
+		.shadow2{
+			width:20%;
+			background:linear-gradient(to left, #00000080 93%, #a4a4a41a);
+			opacity:8.5;
+			height:100%;
+			float:right;
+		}
+		
+		body{
+			overflow:hidden;
+		}
+		
+		*{
+			margin:0px;
+			padding:0px;
+		}
+		
+		.bullets{
+			width:32px;
+			height:32px;
+			background-image:url({% static "image/marker1.png" %});
+			z-index:5;
+			position:fixed;
+		}
+		
+		.b1{
+			margin-top: 396px;
+			margin-left: 376px;
+			}
+			
+		.b2{
+			margin-top: 420px;
+			margin-left: 350px;
+			}
+		
+		.b3{
+			margin-top: 430px;
+			margin-left: 305px;
+			}
+		
+		.b4{
+			margin-top: 410px;
+			margin-left: 250px;
+			}	
+		
+		.b5{
+			margin-top: 374px;
+			margin-left: 221px;
+			}	
+		
+		.b6{
+			margin-top: 341px;
+			margin-left: 190px;
+			}
+		
+		.saying{
+			width:300px;
+			height:300px;
+			z-index:5;
+			position:fixed;
+			display:block;
+			background:red;
+		}
+		
+		
+	</style>
+	</head>
+	<body class="zoom">
+	
+		
+		<div style="width:100%; height:700px; position:fixed; z-index:10; background:black; opacity:0.8; padding-top:150px; box-sizing:boreder-box; display:none;" align=center class="cover">
+			<div style="background:WHITE; padding:50px; box-sizing:boreder-box; width:80%;">
+				<img src="{% static 'image/rover1.jpg' %}" width=200px; heigth=200px >
+				<p id="aboutrover" style="display:none;">
+					The primary landing site chosen for this mission is the "Mare Orientale" basin. The Orientale Basin is located near the western limb of the lunar nearside and is only partially visible from telescopes on Earth. Lunar Orbiter images provided the first good look at this basin, which is 930 kilometers in diameter.
+					The Chaos Mission aims to send a total of ten rovers aboard the Saturn V Spacecraft with a dedicated aim of finding water on the far side of the Moon as well as collecting soil samples to test the variations in the Soil Profile of the Moon. All the data will be backed up by high profile thermal images captured by the rovers.
+
+					Mare Orientale has an overall altitude of about 8000 meters. The surrounding sites seem to be a optimal spot for the touchdown process as they have a lesser altitude than the Basin itself. Thus reaching  the far side of the moon would be easier. 
+					The touchdown co-ordinates of the Lander are proposed to be -24.4707, -77.07941.
+					From here the rovers will travel a distance of about 8.6 km and two of them will stay at the landmark -29.74417, -84.81379 and perform various scientific calculations and sample collections of the soil. These two rovers are named as Alpha Probe and Beta Probe.
+					The rest of the rovers will move ahead to the mission end point, but before that the rovers will launch the charging sequence and will completely charge their batteries. Similar process is followed for all of the following co-ordinates:<br>
+					-33.08402, -95.7022 	:Rover 1, Rover 2 <br>
+					-27.6348, -110.82941	:Rover 3, Rover 4 <br>
+					-18.84573,-117.15753	:Rover5, Rover 6 <br>
+					-9.35355, -126.64972	:Rover 6, Rover 8 <br>
+
+					At each point the two rovers that are deployed will search for any signs of water based elements or minerals in the soil profile. Two Rovers are deployed nearby each other to help ensure that we do not lose an intermediate node in case of a single Rover failure. This is sometimes referred to as a backup system of communication.
+
+				</p>
+				
+				<p id="lunar" style="display:none;">
+					Lunar Rover is a space exploration vehicle that is used to move across the surface of the moon.
+					In our mission, we will be using various lunar rovers deployed on the moon that are going to perform specific tasks.
+					The Rover are continously communicating with each other and exchanging data and would be capable to exchange data from the far side 
+					of the moon. The rovers we are going to use are provided with different sensors but their specifications will remain same
+					except a little changes. The average weight of each rover is 900-1100 kg and material used is carbon iron i.e. stainless steel.
+					Steel is used as it is resistant to corrosion and have good strength even at elevated temperatures and has a melting point of 1370 degree Celsius (2500°F).
+					The tires used in our rovers spun aluminium hub and an diameter of 81.8 cm. Titanium chevrons cover 50% of contact area to
+					provide traction. Each wheel has its own electric drive, DC series wound
+					190 w motor capable of 1000 rpm. Each wheel uses Rocker-Bogie suspension.
+					Every rovers has three cameras attached with it for image capturing, video making and thermal imaging.
+					Our rovers are powered using rechargeable batteries and solar power.
+					Every rover has an additional sensor attached for obstacle measurement that uses infrared waves
+				
+				</p>
+				
+				<p id="soil" style="display:none;">
+					These rovers are designed to explore the moon surface and return soil samples to our Earth. The length of these rovers is
+					around 2.3 meter and it has four HD camera that provides imagery to Earth. They also helps us to examine 
+					ambient light levels to determine the feasibility of astronomical observations from the Moon. There main purpose was to collect
+					soil samples and send it to earth for further examination.
+				</p>
+				
+				<p id="water" style="display:none;">
+					These rovers will help to analyse mineral composition and undertake terrain mapping of the moon. The rovers will weigh between 30 kg and 100 kg.
+					They will help space scientists to navigate moon’s surface during the manned moon mission and provide real-time data and pictures of the surface there.
+					They will collect scientific information on lunar topography, mineralogy, elemental abundance, lunar exosphere and signatures of hydroxyl and water-ice.
+				</p>
+			</div>
+			<button id="close">
+			Close
+			</button>
+		</div>
+		
+		<div class="bullets b1" onclick=showres("b1")>
+		</div>
+		<div class="bullets b2" onclick=showres("b2")>
+		</div>
+		<div class="bullets b3" onclick=showres("b3")>
+		</div>
+		<div class="bullets b4" onclick=showres("b4")>
+		</div>
+		<div class="bullets b5" onclick=showres("b5")>
+		</div>
+		<div class="bullets b6" onclick=showres("b6")>
+		</div>
+		
+		
+		
+		<div class="moon" >
+			<div class="shadow">
+			</div>
+			<div class="shadow2">
+			</div>
+		</div>
+		
+	</body>
+	<script>
+	
+	$(function(){
+		$("#close").click(function(){
+			$(".cover").css("display","none");
+		});
+	});
+	
+	function showres(a){
+		if(a=="b1"){
+			$(".cover").css("display","block");
+			$(".proimg").attr("src","res/rover1.jpg");
+			$("#aboutrover").css("display","block");
+			$("#lunar").css("display","none");
+			$("#soil").css("display","none");
+			$("#water").css("display","none");
+		}
+		if(a=="b2"){
+			$(".cover").css("display","block");
+			$(".proimg").attr("src","res/rover1.jpg");
+			$("#lunar").css("display","block");
+			$("#aboutrover").css("display","none");
+			$("#soil").css("display","none");
+			$("#water").css("display","none");
+		}
+		if(a=="b3"){
+			$(".cover").css("display","block");
+			$(".proimg").attr("src","res/teamindus.jpg");
+			$("#soil").css("display","block");
+			$("#aboutrover").css("display","none");
+			$("#lunar").css("display","none");
+			$("#water").css("display","none");
+		}
+		if(a=="b4"){
+			$(".cover").css("display","block");
+			$(".proimg").attr("src","res/lunarover.jpg");
+			$("#water").css("display","block");
+			$("#aboutrover").css("display","none");
+			$("#lunar").css("display","none");
+			$("#soil").css("display","none");
+		}
+		if(a=="b5"){
+			$(".cover").css("display","block");
+			$(".proimg").attr("src","res/chandrayan2.jpg");
+			$("#lunar").css("display","block");
+			$("#aboutrover").css("display","none");
+			$("#soil").css("display","none");
+			$("#water").css("display","none");
+		}
+		if(a=="b6"){
+			$(".cover").css("display","block");
+			$(".proimg").attr("src","res/rover1.jpg");
+			$("#water").css("display","block");
+			$("#aboutrover").css("display","none");
+			$("#lunar").css("display","none");
+			$("#soil").css("display","none");
+		}
+	};
+	
+	</script>
+</html>

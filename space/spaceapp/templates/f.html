@@ -1,0 +1,117 @@
+
+<html>
+    <body>
+        <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+        {% load staticfiles %}
+        <link href="{% static 'js/p.css' %}" rel="stylesheet" type="text/css"/>
+         <style>
+             /* ---- reset ---- */
+
+body {
+  margin: 0;
+  background-color: #17182f;
+}
+
+
+
+/* ---- particles.js container ---- */
+
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+             #title{
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  
+  color: #FFF;
+  text-align: center;
+  font-family: 'lato',sans-serif;
+  font-weight: 300;
+  font-size: 50px;
+  letter-spacing: 10px;
+  padding-bottom:150px;
+  
+  margin-top: -200px;
+  padding-left: 10px;
+             }
+             
+
+    /* A semi-transparent text shadow */
+    text-shadow:1px 1px 0 rgba(255,255,255,0.4);
+
+    /* Overriding the default underline styling of the links */
+    text-decoration:none !important;
+    white-space:nowrap;
+
+    display:inline-block;
+    vertical-align:baseline;
+    position:relative;
+    cursor:pointer;
+    padding:10px 20px;
+
+    background-repeat:no-repeat;
+
+    /* The following two rules are fallbacks, in case
+       the browser does not support multiple backgrounds. */
+
+    background-position:bottom left;
+    background-image:url('button_bg.png');
+
+    /* CSS3 background positioning property with multiple values. The background
+       images themselves are defined in the individual color classes */
+
+    background-position:bottom left, top right, 0 0, 0 0;
+    background-clip:border-box;
+
+    /* Applying a default border radius of 8px */
+
+    -moz-border-radius:8px;
+    -webkit-border-radius:8px;
+    border-radius:8px;
+
+    /* A 1px highlight inside of the button */
+
+    -moz-box-shadow:0 0 1px #fff inset;
+    -webkit-box-shadow:0 0 1px #fff inset;
+    box-shadow:0 0 1px #fff inset;
+
+    /* Animating the background positions with CSS3 */
+    /* Currently works only in Safari/Chrome */
+
+    -webkit-transition:background-position 1s;
+    -moz-transition:background-position 1s;
+    -o-transition:background-position 1s;
+    transition:background-position 1s;
+}
+            
+
+
+             
+  
+        
+        </style>
+        
+<!-- particles.js container -->
+
+<!-- particles.js lib - https://github.com/VincentGarreau/particles.js --> 
+
+    
+         <div id="particles-js">
+    <script src="{% static 'js/particles.js' }% "></script>
+     <script src="{% static 'js/particles.min.js' %}"></script> 
+    <script src="{% static 'js/app.js' %}"></script>
+    </div>
+    
+        <div id="title">
+           <center> 
+               <strong><p>"Centralizing the human race,Decentralizing the space around us"</p></strong>
+               <strong><p>Team Chaos</p>
+               <a href="{% url 'second' %}"><button style = "background-color: grey;border: none;color: white;padding: 15px 32px;text-align: center;text-decoration: none;display: inline-block;font-size: 16px;cursor:pointer;"><h>Mission to the Moon</h></button></a></strong></center>
+        </div>
+        
+    </body>
+</html>

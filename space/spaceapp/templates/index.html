@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <link href="{% static 'image/favicon.ico" type="image/x-icon" rel="shortcut icon"></link>
+    <link href="css/style.css" type="text/css" rel="stylesheet"></link>
+    <script type="text/javascript" src="js/astro.js"></script>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/libs.js"></script>
+    <script type="text/javascript" src="js/mouse.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="js/shaders.js"></script>
+    <script type="text/javascript" src="js/sphere.js"></script>
+    <script type="text/javascript" src="js/stack.js"></script>
+    <script type="text/javascript" src="js/texture.js"></script>
+
+    <title>Mission To Moon</title>
+	<style>
+		.zoom{
+			width:100%;
+			transform:scale(1) slow;
+			overflow:hidden;
+			width:hidden;
+			height:680px;
+			background:red;
+		}
+		
+		body{
+			overflow:hidden;
+		}
+		
+		@keyframes hide{
+			from{opacity:1;}
+			to{opacity:0;}
+		}
+	</style>
+</head>
+<body onload="main()">
+<div class="zoom" onclick=zoomin()>
+    <canvas id="your_canvas"></canvas>
+</div>	
+
+<script>
+	function zoomin(){
+		$(".zoom").css("transform","scale(50)");
+		$(".zoom").css("transition","transform 1s ease-in-out");
+		$(".zoom").css("animation-name","hide");
+		$(".zoom").css("animation-delay","0.5");
+		$(".zoom").css("animation-fill-mode","forward");
+	}
+</script>
+</body>
+</html>

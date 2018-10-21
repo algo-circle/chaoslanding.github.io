@@ -1,0 +1,60 @@
+
+<html>
+    <body>
+        <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+        {% load staticfiles %}
+         <style>
+             /* ---- reset ---- */
+
+body {
+  margin: 0;
+  background-color: #17182f;
+}
+
+canvas {
+  display: block;
+  vertical-align: bottom;
+}
+
+
+/* ---- particles.js container ---- */
+
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+             #title{
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  
+  color: #FFF;
+  text-align: center;
+  font-family: 'lato',sans-serif;
+  font-weight: 300;
+  font-size: 50px;
+  letter-spacing: 10px;
+  
+  margin-top: -60px;
+  padding-left: 10px;
+             }
+  
+        
+        </style>
+        
+<!-- particles.js container --> 
+<div id="particles-js">
+
+<!-- particles.js lib - https://github.com/VincentGarreau/particles.js --> 
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+        <script src="{% static 'js/f.js' %}"></script>
+    
+        </div>
+      <div>
+          <center><img src="{% static 'images/hero.png' %}"></center>
+        </div>
+        
+    </body>
+</html>

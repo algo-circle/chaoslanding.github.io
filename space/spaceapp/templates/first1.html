@@ -1,0 +1,40 @@
+<html>
+    <head><title>team</title></head>
+    {% load staticfiles %}
+    
+<body>
+    <style>
+        body{
+            margin:0;
+            padding: 0;
+            
+            height:100vh;
+        }
+        #particles-js{
+            height:100%;
+            
+            background-color: black;
+            background: 100%;
+            background-size: cover;
+            
+        }
+    
+    </style>
+    
+    
+    <div id="particles-js">
+      
+        <srcipt src="{% static 'particles.js' %}"></srcipt>
+         <srcipt src="{% static 'particles.min.js' %}"></srcipt>
+    
+        
+         <srcipt src="{% static 'app.js' %}"></srcipt>
+        </div>
+    
+    
+
+    
+    
+    </body>
+
+</html>
